@@ -3,14 +3,24 @@ function setup(){
   createCanvas(200, 200);
   calendar(2019, 10);
 
-  for(let i = 2000; i <= 2100; i++){
-    if(isLeapYear(i)){
-      console.log(i + "年はうるう年です");
-    }
+//  for(let i = 2000; i <= 2100; i++){
+    //if(isLeapYear(i)){
+    //  console.log(i + "年はうるう年です");
+  //  }
+    //else{
+  //    console.log(i + "年はうるう年ではありません");
+  //  }
+  //}
+//
+
+for(let i = 2000; i <= 2100; i++){
+    if(daysInYear(i)){
+    console.log(i + "年は366日あります");
+   }
     else{
-      console.log(i + "年はうるう年ではありません");
-    }
+     console.log(i + "年は365日あります");
   }
+}
 }
 
 function calendar(y, m){
@@ -25,7 +35,7 @@ function isLeapYear(y){
 }
 
 function daysInYear(y){
-  // BLANK[1]
+  return (y % 4 == 0) && (y % 100 != 0) || (y % 400 == 0);//LANK[1]
 }
 
 function daysInMonth(y, m){
