@@ -1,5 +1,5 @@
 // テキスト「アニメーション」
-let x, y, vx, vy, d=0 , a 
+let x, y, vx, vy, d=0 , a
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
@@ -13,9 +13,12 @@ function draw(){
   background(160, 192, 255);
   // BLANK[2] (hint: 作った star 関数を使います)
 fill(50,100,255);
-star(x, y, 20, a)
-d = d + 1
-a = d
+star(x, y, 20, a);
+d = d + 1;
+if(d>3){d=0};
+a = d;
+x=x+vx
+y=y+vy
 
   // 端の処理パターン (1) 反対側から出てくる
   if(x > width){ x = 0; }
