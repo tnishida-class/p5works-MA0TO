@@ -17,13 +17,12 @@ function setup() {
 
   drawCircle(black, maxR);
   drawArcs(green, red, maxR * 0.8);
-
-  
+// BLANK[1] (hint: drawArcs x 3, drawCircle x 1)
   drawArcs(cream, black, maxR * 0.75);
   drawArcs(green, red, maxR/2 * 0.9);
   drawArcs(cream, black, maxR/2 * 0.8);
   drawCircle(green, maxR * 0.1);
-  // BLANK[1] (hint: drawArcs x 3, drawCircle x 1)
+  
 
   drawCircle(red, maxR * 0.05);
 }
