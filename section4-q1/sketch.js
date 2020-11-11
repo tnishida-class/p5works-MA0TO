@@ -12,7 +12,7 @@ function draw(){
   background(255, 200, 255);
   count = (count + 1) % cycle;
   // BLANK[1]
-count = constrain(count, width/3, width/2)
+count = constrain(count, cycle-30, cycle)
 let size = count
 
 fill(255,100,150)
