@@ -31,8 +31,9 @@ function star(cx, cy, r, angle){
   beginShape();
   noStroke();
   for(var i = 0; i < 20; i++){
-    var theta = TWO_PI * i * 2 / 5 - HALF_PI * angle;
     // BLANK[1] (hint: angle 分だけ星を回転させるには？)
+var theta = TWO_PI * i * 2 / 5 - HALF_PI * angle;
+
 
     var x = cx + cos(theta) * r;
     var y = cy + sin(theta) * r;
