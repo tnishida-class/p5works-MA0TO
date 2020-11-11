@@ -17,6 +17,7 @@ function setup() {
 
   drawCircle(black, maxR);
   drawArcs(green, red, maxR * 0.8);
+<<<<<<< HEAD
 // BLANK[1] (hint: drawArcs x 3, drawCircle x 1)
   drawArcs(cream, black, maxR * 0.75);
   drawArcs(green, red, maxR/2 * 0.9);
@@ -24,6 +25,9 @@ function setup() {
   drawCircle(green, maxR * 0.1);
   
 
+=======
+  // BLANK[1] (hint: drawArcs x 3, drawCircle x 1)
+>>>>>>> parent of 3eb416e... Update sketch.js
   drawCircle(red, maxR * 0.05);
 }
 
