@@ -3,10 +3,15 @@ let x, y, vx, vy, d=0 , a
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
-  x = width / 2;
-  y = height / 2;
+  //x=width/2
+  //y=height/2
   vx = 8;
   vy = 8;
+}
+
+function mouseClicked(){　　//クリックした場所から流れ星
+  x=mouseX
+  y=mouseY
 }
 
 function draw(){
