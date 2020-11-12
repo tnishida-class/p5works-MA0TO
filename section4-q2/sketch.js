@@ -1,5 +1,5 @@
 // テキスト「アニメーション」
-let x, y, vx, vy, d=0 , a, e=0
+let x, y, vx, vy, d=0
 
 function setup(){
   createCanvas(windowWidth, windowHeight);
@@ -17,15 +17,13 @@ function mouseClicked(){　　//クリックした場所から流れ星
 function draw(){
   background(160, 192, 255);
   // BLANK[2] (hint: 作った star 関数を使います)
-e = e + 1
-
-if(e%2==0){fill(100,100,255);
-star(x, y, 20, a,);}
+if(d%2==0){fill(100,100,255);
+star(x, y, 20, d,);}
 else{fill(255)
-star(x, y, 20, a,);}
+star(x, y, 20, d,);}
 d = d + 1;
 if(d>3){d=0};
-a = d;
+//a = d;
 x=x+vx
 y=y+vy
 
