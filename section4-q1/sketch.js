@@ -12,7 +12,8 @@ function setup(){
 function draw(){
   background(255, 200, 255);
   let speed = keyIsPressed ? 3 : 1 //  どこかのキーが押されていると鼓動が速くなる
-  count = (count + speed) % cycle;
+  count = (count + speed) //% cycle;
+  if(count > cycle){count=cycle-30}
   // BLANK[1]
 count = constrain(count, cycle-30, cycle)
 let size = count
