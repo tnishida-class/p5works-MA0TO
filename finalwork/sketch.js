@@ -29,7 +29,7 @@ vy = constrain(vy + g, -vyMax, vyMax);
 
 //壁に跳ね返る
   if(ballx < 0 || ballx > width){ vx = -1 * vx }
-  if(bally < 0 || bally > height){ background(0, 0, 100)}
+  if(bally < 0 || bally > height){background(0, 0, 100)}
 
 
   ballx = constrain(ballx, 0, width);
@@ -46,7 +46,7 @@ vy = constrain(vy + g, -vyMax, vyMax);
 
 //バーに跳ね返る
 if(ballx + 10 > barx && ballx - 10 < barx + barwidth && bally + 10 > bary && bally + 10 < bary + barheight){vy = -1 * vy;
-vx = random(-14,14)
+vx = random(-20,20)
 }
 
 
