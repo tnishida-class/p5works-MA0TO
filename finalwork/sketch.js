@@ -20,7 +20,6 @@ function setup(){
 function draw(){
   background(80, 80, 255);
 
-
   fill(255)
   circle(ballx, bally, 20);
   ballx += vx;
