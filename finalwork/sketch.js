@@ -1,5 +1,5 @@
 // 最終課題を制作しよう
-let ballx, bally, vx, vy, barx, barwidth, barheight,a=0 ,b=255,c = 0
+let ballx, bally, vx, vy, barx, barwidth, barheight,a=255 ,b=80,c =128
 const g = 1
 const vyMax = 30
 
@@ -10,9 +10,9 @@ function setup(){
   vx = 8;
   vy = 8;
   barwidth=100
-  barheight=20
+  barheight=110
   barx = width / 2 - barwidth / 2
-  bary = height - barheight*6
+  bary = height - barheight
   }
 
 
@@ -29,19 +29,19 @@ vy = constrain(vy + g, -vyMax, vyMax);
 
 //壁に跳ね返る
   if(ballx < 0 || ballx > width){ vx = -1 * vx }
-  if(bally < 0 || bally > height){background(0, 0, 100)}
+  if(bally < 0 || bally > height){background(20, 0, 100)}
 
 
   ballx = constrain(ballx, 0, width);
   bally = constrain(bally, 0, height);
 
 //バーの色が変わる
-  a = a + 6
-  if(a > 255){a=0}
-  b = b - 2
-  if(b < 0){b=255}
-  c = c + 4
-  if(c > 255){c=0}
+  a = a - 5
+  if(a < 0){a=255}
+  b = b + 5
+  if(b >255){b=80}
+  c = c - 1
+  if(c < 0){c=200}
   rectgamebar(a, b, c)
 
 //バーに跳ね返る
@@ -52,7 +52,7 @@ vx = random(-20,20)
 
   noStroke()
   fill(70)
-  ellipse(width/2+13,height/7-3,100,50)
+  rect(width/2-40,height/7-30,107,50)
   fill(255,200,0)
   strokeWeight(5)
   text("start",width/2,height/7)
@@ -61,11 +61,15 @@ vx = random(-20,20)
 
 
 function mouseClicked(){
+if(mouseX>width/2-40 && mouseX<width/2-40+107 && mouseY>height/7-30 && mouseY<height/7-30+50){
 ballx=mouseX
 bally=mouseY
 push()
 vx = 0
+vy = 8
 pop()
+}
+
 
 }
 
