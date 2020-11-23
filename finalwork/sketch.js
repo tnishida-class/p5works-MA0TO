@@ -29,32 +29,34 @@ vy = constrain(vy + g, -vyMax, vyMax);
 
 //壁に跳ね返る
   if(ballx < 0 || ballx > width){ vx = -1 * vx }
-  if(bally < 0 || bally > height){background(20, 0, 100)}
-
+  if(bally < 0 || bally > height){background(20, 0, 100);
+  fill(100,255,50);
+  text("GAME OVER",width / 2 - 25, height / 4);
+}
 
   ballx = constrain(ballx, 0, width);
   bally = constrain(bally, 0, height);
 
 //バーの色が変わる
-  a = a - 5
-  if(a < 0){a=255}
-  b = b + 5
-  if(b >255){b=80}
-  c = c - 1
-  if(c < 0){c=200}
-  rectgamebar(a, b, c)
+  a = a - 5;
+  if(a < 0){a=255};
+  b = b + 5;
+  if(b >255){b=80};
+  c = c - 1;
+  if(c < 0){c=200};
+  rectgamebar(a, b, c);
 
 //バーに跳ね返る
 if(ballx + 10 > barx && ballx - 10 < barx + barwidth && bally + 10 > bary && bally + 10 < bary + barheight){vy = -1 * vy;
-vx = random(-20,20)
+vx = random(-20,20);
 }
 
 
-  noStroke()
-  fill(70)
-  rect(width/2-40,height/7-30,107,50)
-  fill(255,200,0)
-  strokeWeight(5)
+  noStroke();
+  fill(70);
+  rect(width/2-40,height/7-30,107,50);
+  fill(255,200,0);
+  strokeWeight(5);
   text("start",width/2,height/7)
 
 }
